@@ -1,0 +1,90 @@
+/*
+$variable: red;
+nesting
+@mixin flex-column($color){display: flex; flex-direction: column; color: $color;} @include flex-column(red);
+if, else, each, functions
+*/
+@font-face {
+  font-family: manrope;
+  src: url(./font/Manrope-VariableFont_wght.ttf);
+}
+body {
+  font-family: "manrope";
+  background-color: hsl(218, 23%, 16%);
+  margin: 0px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  position: relative;
+  border-radius: 16px;
+  background-color: hsl(217, 19%, 24%);
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  color: hsl(150, 100%, 66%);
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+q {
+  color: hsl(193, 38%, 86%);
+  font-size: 28px;
+  font-weight: 800;
+  padding-bottom: 32px;
+}
+
+button {
+  margin-top: 0;
+  border: none;
+  transition: all ease-in-out 200ms;
+  position: absolute;
+  left: calc(50% - 45px);
+  top: 89%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  background-color: hsl(150, 100%, 66%);
+  padding: 28px;
+  border-radius: 50%;
+}
+
+button:hover {
+  box-shadow: 0px 0px 39px 2px hsl(150, 100%, 66%);
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  div {
+    width: 500px;
+    padding: 48px 64px;
+    padding-bottom: 96px;
+  }
+  span img {
+    content: url(./images/pattern-divider-desktop.svg);
+  }
+}
+@media only screen and (max-width: 799px) {
+  div {
+    width: auto;
+    padding: 24px 32px;
+    padding-bottom: 64px;
+  }
+  span img {
+    content: url(./images/pattern-divider-mobile.svg);
+    scale: 0.5;
+  }
+}/*# sourceMappingURL=style.css.map */
